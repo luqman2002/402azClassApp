@@ -5,9 +5,10 @@ export default class NavBar extends Component{
         return(
             <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"/>
+    <a class="navbar-item" href="/C:\Users\Administrator\Documents\GitHub\402azClassApp\402azclassapp\logo.png">
+      <img src="logo.png" width="112" height="28"/>
     </a>
+
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
@@ -20,6 +21,14 @@ export default class NavBar extends Component{
     <div class="navbar-start">
       <a class="navbar-item" href="/">
         Home
+      </a>
+
+      <a class="navbar-item" href="/TvShow">
+        Tv Shows
+      </a>
+
+      <a class="navbar-item" href="/Movies.js">
+        Movies
       </a>
 
       <a class="navbar-item" href="/About">
