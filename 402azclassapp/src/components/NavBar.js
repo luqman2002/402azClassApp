@@ -1,12 +1,14 @@
 import react, {Component, component} from 'react';
+import logo from './logo.png';
+
 
 export default class NavBar extends Component{
     render(){
         return(
             <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="/C:\Users\Administrator\Documents\GitHub\402azClassApp\402azclassapp\logo.png">
-      <img src="logo.png" width="112" height="28"/>
+    <a class="navbar-item" href="/">
+      <img src={logo} width="112" height="28"/>
     </a>
 
 
