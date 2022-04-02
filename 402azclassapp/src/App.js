@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
 import TvShow from './components/TvShow';
+import SnowFallPage from './components/SnowFallPage';
 
 class App extends Component{
   render(){
@@ -18,6 +19,7 @@ class App extends Component{
           <Route path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/tvshow" element={<TvShow/>}/>
+          <Route path="/snowfallpage" element={<SnowFallPage/>}/>
         </Routes>
         <Footer />
         </Router>

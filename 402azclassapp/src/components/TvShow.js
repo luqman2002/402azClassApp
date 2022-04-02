@@ -76,11 +76,11 @@ export default class TvShow extends Component{
 
 
 
-    <div class="columns">
+  <div class="columns">
   <div class="column">
-  <figure class="image is-128x128">
-  <img src={SnowFall}/>
-</figure>
+  <a class="column-item" href="/SnowFallPage">
+      <img src={SnowFall} alt= "Logo of Snow Fall" width="128" height="128"/>
+  </a>
   </div>
   <div class="column">
   <figure class="image is-128x128">
