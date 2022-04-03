@@ -16,48 +16,44 @@ export default class TvShow extends Component{
     </p>
 
   <figure class="image is-square">
-  <img src={Wallpaper}/>
-</figure>
+    <img src={Wallpaper}/>
+  </figure>
 
-<div class="dropdown">
+
+  <div class="dropdown is-active">
   <div class="dropdown-trigger">
-    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-      <span>Click me</span>
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+      <span>Dropdown button</span>
       <span class="icon is-small">
         <i class="fas fa-angle-down" aria-hidden="true"></i>
       </span>
     </button>
   </div>
-  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+  <div class="dropdown-menu" id="dropdown-menu" role="menu">
     <div class="dropdown-content">
       <a href="#" class="dropdown-item">
-        Overview
+        Dropdown item
+      </a>
+      <a class="dropdown-item">
+        Other dropdown item
+      </a>
+      <a href="#" class="dropdown-item is-active">
+        Active dropdown item
       </a>
       <a href="#" class="dropdown-item">
-        Modifiers
-      </a>
-      <a href="#" class="dropdown-item">
-        Grid
-      </a>
-      <a href="#" class="dropdown-item">
-        Form
-      </a>
-      <a href="#" class="dropdown-item">
-        Elements
-      </a>
-      <a href="#" class="dropdown-item">
-        Components
-      </a>
-      <a href="#" class="dropdown-item">
-        Layout
+        Other dropdown item
       </a>
       <hr class="dropdown-divider"/>
       <a href="#" class="dropdown-item">
-        More
+        With a divider
       </a>
     </div>
   </div>
 </div>
+
+
+
+
 
     <div class="columns">
   <div class="column">
@@ -77,15 +73,20 @@ export default class TvShow extends Component{
 
 
   <div class="columns">
+
   <div class="column">
+
   <a class="column-item" href="/SnowFallPage">
       <img src={SnowFall} alt= "Logo of Snow Fall" width="128" height="128"/>
   </a>
+
   </div>
   <div class="column">
-  <figure class="image is-128x128">
-  <img src={Flash}/>
-</figure>
+
+  <a class="column-item" href="/TheFlashPage">
+      <img src={Flash} alt= "Logo of The Flash" width="128" height="128"/>
+  </a>
+
   </div>
   <div class="column">
   <figure class="image is-128x128">
