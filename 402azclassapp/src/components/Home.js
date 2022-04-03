@@ -11,8 +11,7 @@ export default class Home extends Component{
 <div class="columns">
   <div class="column"></div>
   <div class="column is-half"><input class="input" type="text" placeholder="Enter Email"></input></div>
-  <div class="column"><button class="button" href="/LogInPage">Log in</button></div>
-  <Link to="/LogInPage" className="btn btn-primary">Sign up</Link>
+  <div class="column"><button class="button">Log in </button></div>
 </div>
 
   </div>
