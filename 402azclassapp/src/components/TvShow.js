@@ -9,18 +9,8 @@ export default class TvShow extends Component{
     render(){
         return(
             <section class="hero is-large is-info">
-  <div class="hero-body">
 
-  <p class="title">
-      Tv Shows
-    </p>
-
-  <figure class="image is-square">
-    <img src={Wallpaper}/>
-  </figure>
-
-
-  <div class="dropdown is-active">
+<div class="dropdown is-active">
   <div class="dropdown-trigger">
     <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
       <span>Dropdown button</span>
@@ -50,6 +40,17 @@ export default class TvShow extends Component{
     </div>
   </div>
 </div>
+  <div class="hero-body">
+
+ 
+
+
+  <p class="title">
+      Tv Shows
+    </p>
+
+
+
 
 
 
@@ -60,7 +61,7 @@ export default class TvShow extends Component{
     Snowfall
   </div>
   <div class="column">
-    The Flah
+    The Flash
   </div>
   <div class="column">
     Stranger Things

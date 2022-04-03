@@ -9,6 +9,7 @@ import About from './components/About';
 import TvShow from './components/TvShow';
 import SnowFallPage from './components/SnowFallPage';
 import TheFlashPage from './components/TheFlashPage';
+import LoginPage from './components/LogInPage';
 
 class App extends Component{
   render(){
@@ -22,6 +23,7 @@ class App extends Component{
           <Route path="/tvshow" element={<TvShow/>}/>
           <Route path="/snowfallpage" element={<SnowFallPage/>}/>
           <Route path="/theflashpage" element={<TheFlashPage/>}/>
+          <Route path="/loginpage" element={<LoginPage/>}/>
         </Routes>
         <Footer />
         </Router>
