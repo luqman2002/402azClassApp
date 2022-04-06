@@ -10,6 +10,7 @@ import TvShow from './components/TvShow';
 import SnowFallPage from './components/SnowFallPage';
 import TheFlashPage from './components/TheFlashPage';
 import LoginPage from './components/LogInPage';
+import SignUp from './components/SignUp';
 
 class App extends Component{
   render(){
@@ -24,6 +25,7 @@ class App extends Component{
           <Route path="/snowfallpage" element={<SnowFallPage/>}/>
           <Route path="/theflashpage" element={<TheFlashPage/>}/>
           <Route path="/loginpage" element={<LoginPage/>}/>
+          <Route path="/SignUp" element={<SignUp/>}/>
         </Routes>
         <Footer />
         </Router>
