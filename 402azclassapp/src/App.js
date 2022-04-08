@@ -11,11 +11,13 @@ import SnowFallPage from './components/SnowFallPage';
 import TheFlashPage from './components/TheFlashPage';
 import LoginPage from './components/LogInPage';
 import SignUp from './components/SignUp';
+import { withAuthenticator } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
 
-class App extends Component{
-  render(){
+function App() {
     return (
-      <div>
+      <Authenticator>
+      <div className="App">
         <Router>
         <NavBar />
         <Routes>
@@ -31,10 +33,9 @@ class App extends Component{
         </Router>
    
       </div>
+      </Authenticator>
       );
 
   }
-}
-
 
 export default App;
