@@ -21,6 +21,7 @@ useEffect (() => {
   getTvShows()
 }, [])
 
+
 return(
     <>
     <section className="section">

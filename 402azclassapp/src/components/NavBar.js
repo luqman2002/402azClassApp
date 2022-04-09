@@ -29,6 +29,11 @@ export default class NavBar extends Component{
         Tv Shows
       </a>
 
+
+      <a className="navbar-item" href="/TvShowAdmin">
+        Tv Show Admin
+      </a>
+
       <a className="navbar-item" href="/Movies.js">
         Movies
       </a>
