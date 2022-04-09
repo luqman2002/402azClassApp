@@ -10,12 +10,18 @@ const [tvshows, setTvshows] = useState([]);
 
 const baseUrl = "https://847pz3ny24.execute-api.us-east-1.amazonaws.com/tvshows";
 
-const getTvShows = () => {
-  fetch(baseUrl)
-  .then((res) => res.json())
-  .then((res) => setTvshows(res.Items))
 
-} 
+
+const getTvShows = () => {
+    try{
+        fetch(baseUrl)
+        .then((res) => res.json())
+        .then((res) => setTvshows(res.Items))
+       }catch(err){
+           console.log(err)
+       }
+
+    }
 
 useEffect (() => {
   getTvShows()
