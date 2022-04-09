@@ -6,7 +6,7 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
-import TvShow from './components/TvShow';
+import TvShows from './components/TvShows';
 import SnowFallPage from './components/SnowFallPage';
 import TheFlashPage from './components/TheFlashPage';
 import LoginPage from './components/LogInPage';
@@ -16,14 +16,13 @@ import '@aws-amplify/ui-react/styles.css';
 
 function App() {
     return (
-      <Authenticator>
       <div className="App">
         <Router>
         <NavBar />
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
-          <Route path="/tvshow" element={<TvShow/>}/>
+          <Route path="/tvshows" element={<TvShows/>}/>
           <Route path="/snowfallpage" element={<SnowFallPage/>}/>
           <Route path="/theflashpage" element={<TheFlashPage/>}/>
           <Route path="/loginpage" element={<LoginPage/>}/>
@@ -33,7 +32,6 @@ function App() {
         </Router>
    
       </div>
-      </Authenticator>
       );
 
   }
