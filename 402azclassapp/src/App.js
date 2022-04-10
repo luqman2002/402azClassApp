@@ -14,9 +14,14 @@ import SignUp from './components/SignUp';
 import TvShowAdmin from './components/TvShowAdmin';
 import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
+import { AmplifyProvider } from '@aws-amplify/ui-react';
 
-function App() {
+function App({ isPassedToWithAuthenticator, signOut, user }) {
+  if (!isPassedToWithAuthenticator) {
+    throw new Error(`isPassedToWithAuthenticator was not provided`);
+  }
     return (
+      <AmplifyProvider>
       <div className="App">
         <Router>
         <NavBar />
@@ -34,8 +39,17 @@ function App() {
         </Router>
    
       </div>
+      </AmplifyProvider>
       );
 
   }
 
-export default App;
+  export default withAuthenticator(App);
+
+  export async function getStaticProps() {
+    return {
+      props: {
+        isPassedToWithAuthenticator: true,
+      },
+    };
+  }

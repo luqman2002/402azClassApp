@@ -9,8 +9,8 @@ Amplify.configure({
   Auth: {
     mandatorySignIn: true,
     region: "us-east-1",
-    userpoolID: "us-east-1_spt60Ust5"
-
+    userpoolID: "us-east-1_spt60Ust5",
+    userpoolWebClientId: "3s9hui1pk7ca55a4mg0djrukjt"
   }
 })
 

@@ -22,6 +22,8 @@ function TvShowAdmin(){
 
     });
 
+    const [tvshows, setTvshows] = useState([]);
+
     const baseUrl = "https://847pz3ny24.execute-api.us-east-1.amazonaws.com/tvshows";
 
     const navigate = useNavigate();
@@ -30,6 +32,22 @@ function TvShowAdmin(){
         method: 'PUT',
         headers:{'Content-Type': 'application/json'},
         body: JSON.stringify(tvshow)
+    }
+
+    const deleterequestOptions = {
+        method: 'DELETE',
+        headers:{'Content-Type': 'application/json'},
+    }
+
+    const deleteTvshow =(id) => {
+        try{
+            fetch(`${baseUrl}/${id}`,deleterequestOptions)
+            .then((res) => res.json())
+            .then((data) => console.log(data));
+            navigate("/tvshows");
+        }catch(err){
+            console.log(err)
+        }
     }
 
     const putTvshow =() => {
@@ -44,6 +62,20 @@ function TvShowAdmin(){
 
     }
 
+    const getTvShows = () => {
+        try {
+            fetch(baseUrl)
+            .then((res) => res.json())
+            .then((data) => setTvshows(data.Items))
+        }catch(err){
+            console.log(err)
+        }
+    }
+
+
+    useEffect(() =>{
+        getTvShows()
+    }, [])
 
     return(
         <>
@@ -71,6 +103,43 @@ function TvShowAdmin(){
         <input className="input m-1" type="text" placeholder="Tv Show cast" onChange={e => setTvshow({...tvshow, ShowFeatutedCast:e.target.value})} />
         <button className='button is-primary' onClick={putTvshow}>Add TvShow</button>
     </div>
+    <section className="container">
+        <div className="columns is-multiline">
+            {
+                tvshows && tvshows.length > 0
+                ? tvshows.map(tvshow =>
+                    <div className="column">
+                    <div className="card">
+                        <div className="card-content">
+                            <div className="content">
+                                <p className='subtitle'>{tvshow.ShowTitle}</p>
+                                <p>{tvshow.ShowDuration}</p>
+                                <p>{tvshow.ShowAgeRating}</p>
+                                <p>{tvshow.ShowAverageViewerRating}</p>
+                                <p>{tvshow.ShowViewCount}</p>
+                                <p>{tvshow.ShowAvailableCaptions}</p>
+                                <p>{tvshow.ShowPublisher}</p>
+                                <p>{tvshow.ShowEpisode}</p>
+                                <p>{tvshow.ShowSeries}</p>
+                                <p>{tvshow.ShowDescription}</p>
+                                <p>{tvshow.ShowGenres}</p>
+                                <p>{tvshow.ShowAudioLanguage}</p>
+                                <p>{tvshow.ShowReleaseDate}</p>
+                                <p>{tvshow.ShowFeatutedCast}</p>
+
+
+                            </div>
+                            <footer className="card-footer">
+                                <button className="button is-primary card-footer-item" onClick={() => deleteTvshow(tvshow.id)}>Delete</button>
+                            </footer>
+                         </div>
+                    </div>
+                    </div>
+                    )
+                    : <div className='column is-one-third'><h1>Tvshow not found</h1></div>
+            }
+        </div>
+    </section>
     </>
     )
 
