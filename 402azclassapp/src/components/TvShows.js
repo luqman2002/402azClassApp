@@ -8,6 +8,7 @@ function TvShows(){
 
 const [tvshows, setTvshows] = useState([]);
 
+
 const baseUrl = "https://847pz3ny24.execute-api.us-east-1.amazonaws.com/tvshows";
 
 
@@ -32,8 +33,8 @@ return(
     <>
     <section className="section">
         <h1 className="title">TvShows</h1>
-        <h2 className="subtitle">
-            A simple container to divide your page into <strong>sections</strong>, like the one you're cu
+        <h2 className="subtitle" >
+           you can watch tvshows <strong>here</strong> on this free streaming site
         </h2>
     </section>
     <section className="container">
@@ -41,11 +42,11 @@ return(
             {
                 tvshows && tvshows.length > 0
                 ? tvshows.map(tvshow =>
-                    <div className="column">
+                    <div className="column m-2">
                     <div className="card">
                         <div className="card-content">
                             <div className="content">
-                                <p className='subtitle'>{tvshow.ShowTitle}</p>
+                                <p className='subtitle has-text-black'>{tvshow.ShowTitle}</p>
                                 <p>{tvshow.ShowDuration}</p>
                                 <p>{tvshow.ShowAgeRating}</p>
                                 <p>{tvshow.ShowAverageViewerRating}</p>
