@@ -12,12 +12,15 @@ import TheFlashPage from './components/TheFlashPage';
 import LoginPage from './components/LogInPage';
 import SignUp from './components/SignUp';
 import TvShowAdmin from './components/TvShowAdmin';
+import { withAuthenticator } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
 
 
 function App(){
     return(
       <div className="App">
         <Router>
+          <div>
         <NavBar />
         <Routes>
           <Route path="/" element={<Home/>}/>
@@ -30,10 +33,11 @@ function App(){
           <Route path="/tvshowadmin" element={<TvShowAdmin/>}/>
         </Routes>
         <Footer />
+        </div>
         </Router>
-   
       </div>
-      )
+      );
+      
     }
 
-  export default App;
+  export default withAuthenticator(App);

@@ -1,8 +1,40 @@
 import react, {Component, component} from 'react';
 import logo from './logo.png';
+import { Auth } from 'aws-amplify';
+import { authFieldsWithDefaults } from '@aws-amplify/ui';
+import { useNavigate } from 'react-router-dom';
 
 
 export default class NavBar extends Component{
+
+  state ={
+    user: {}
+  }
+
+
+
+  getUsr(){
+    Auth.currentAuthenticatedUser()
+    .then(res => this.setState({user: res}));
+
+  }
+
+  async signOut(){
+    try{
+      await Auth.signOut(); 
+
+    }catch(ex){
+      console.log(ex)
+    }
+    
+
+  };
+
+  componentDidMount(){
+    this.getUsr();
+  }
+
+
     render(){
         return(
             <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -48,9 +80,9 @@ export default class NavBar extends Component{
     <div className="navbar-end">
       <div className="navbar-item">
         <div className="buttons">
-          <a className="button is-primary" href="/SignUp">
+          <button onClick={() => this.signOut()} className="button is-primary" href="/SignUp">
             <strong>Sign out</strong>
-          </a>
+          </button>
         </div>
       </div>
     </div>

@@ -8,10 +8,10 @@ export default class Home extends Component{
   <div class="hero-body">
 
 
-<div class="columns">
-  <div class="column"></div>
-  <div class="column is-half"><input class="input" type="text" placeholder="Enter Email"></input></div>
-  <div class="column"><a class="button" href="/LogInPage">Log in </a></div>
+<div className="columns">
+  <div className="column"></div>
+  <div className="column is-half"><input class="input" type="text" placeholder="Enter Email"></input></div>
+  <div className="column"><a class="button" href="/LogInPage">Log in </a></div>
 </div>
 
   </div>

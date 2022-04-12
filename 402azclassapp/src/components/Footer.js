@@ -5,18 +5,18 @@ export default class Footer extends Component {
         return (
             <footer className="footer">
   <div className="content has-text-centered">
-  <div class="columns">
-  <div class="column">
+  <div className="columns">
+  <div className="column">
     Contact us
   </div>
-  <div class="column">
+  <div className="column">
     Forum
   </div>
-  <a class="column" href="/About">
+  <a className="column" href="/About">
     About us
   </a>
 
-  <div class="column">
+  <div className="column">
     Cookies
   </div>
 </div>
