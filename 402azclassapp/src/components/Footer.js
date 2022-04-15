@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 
+// The footer of the webapp which has extra info for the users to click based on legal needs //
+
+
 export default class Footer extends Component {
     render(){
         return (

@@ -1,6 +1,8 @@
 @import "~bulma/css/bulma.css";
 @import url("https://fonts.googleapis.com/css?family=Roboto:400|Inter:400,700");
 
+/* the design behind the differnet components change to fit the user needs */
+
   .navbar{
     background-color: #21265C;
     color: white;

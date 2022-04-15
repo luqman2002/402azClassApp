@@ -5,6 +5,9 @@ import { authFieldsWithDefaults } from '@aws-amplify/ui';
 import { useNavigate } from 'react-router-dom';
 
 
+// this is the navigation that the user uses to get around the webapp //
+
+
 export default class NavBar extends Component{
 
   state ={
@@ -18,6 +21,8 @@ export default class NavBar extends Component{
     .then(res => this.setState({user: res}));
 
   }
+
+  // sign out function //
 
   async signOut(){
     try{
@@ -50,6 +55,7 @@ export default class NavBar extends Component{
       <span aria-hidden="true"></span>
     </a>
   </div>
+
 
   <div id="navbarBasicExample" className="navbar-menu">
     <div className="navbar-start">

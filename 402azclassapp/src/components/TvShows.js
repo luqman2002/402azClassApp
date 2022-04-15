@@ -2,6 +2,7 @@ import React, { Component, useState, Fragment, useEffect } from "react";
 import {toHaveDisplayValue} from '@testing-library/jest-dom/dist/matchers';
 
 
+// this page is what the user sees when brwosing through the tvshows //
 
 function TvShows(){
 

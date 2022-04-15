@@ -1,16 +1,31 @@
 import React, {Component} from 'react';
 
+// This is the about page //
+
 export default class About extends Component {
     render(){
         return(
-            <div className='container'>
-                <section className='section'>
-                <h1 className='title'>About</h1>
-                <h2 className='subtitle'>Learn about us</h2>
+            // The hero which sets the background of the webapp //
+            <div className=' hero-body'> 
+                <section className>
+                <div className="card">
+                        <div className="card-content">
+                            <div className="content">
+                            <h1 className='title'>WHO WE ARE </h1>
+                                <p className='subtitle has-text-black'> 
+                                    WebVideo Inc. is a US enterprise video hosting platform
+                                </p>
+                            <h2 className='subtitle'>Learn about us</h2>
+                                <p>
+                                We have now launched a UK consumer platform, that allows customers to access syndicated US television shows and movies for free with separate listing of shows and descriptions available. all you need to do is signup for free with an email and password and you can enter the world of endless entertainment.
+                                </p>
 
-                        <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
+
+
+                            </div>
+                         </div>
+                    </div>
+
                 </section>
             </div>
 

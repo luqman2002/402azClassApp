@@ -7,14 +7,12 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
 import TvShows from './components/TvShows';
-import SnowFallPage from './components/SnowFallPage';
-import TheFlashPage from './components/TheFlashPage';
-import LoginPage from './components/LogInPage';
 import SignUp from './components/SignUp';
 import TvShowAdmin from './components/TvShowAdmin';
 import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 
+// This is the mapping of each page using routes, in the navbar is where they are allocated to each href //
 
 function App(){
     return(
@@ -26,9 +24,6 @@ function App(){
           <Route path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/tvshows" element={<TvShows/>}/>
-          <Route path="/snowfallpage" element={<SnowFallPage/>}/>
-          <Route path="/theflashpage" element={<TheFlashPage/>}/>
-          <Route path="/loginpage" element={<LoginPage/>}/>
           <Route path="/SignUp" element={<SignUp/>}/>
           <Route path="/tvshowadmin" element={<TvShowAdmin/>}/>
         </Routes>

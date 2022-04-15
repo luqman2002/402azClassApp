@@ -3,6 +3,8 @@ import {useNavigate} from 'react-router-dom';
 
 function TvShowAdmin(){
 
+
+    // sets the variables in setTvshow//
     const [tvshow, setTvshow] = useState({
         id: "",
         ShowTitle: "",
@@ -24,6 +26,8 @@ function TvShowAdmin(){
 
     const [tvshows, setTvshows] = useState([]);
 
+
+    // connection to the api //
     const baseUrl = "https://847pz3ny24.execute-api.us-east-1.amazonaws.com/tvshows";
 
     const navigate = useNavigate();
@@ -39,6 +43,8 @@ function TvShowAdmin(){
         headers:{'Content-Type': 'application/json'},
     }
 
+
+    // fetch for deleting tv shows from the webapp//
     const deleteTvshow =(id) => {
         try{
             fetch(`${baseUrl}/${id}`,deleterequestOptions)
@@ -50,6 +56,8 @@ function TvShowAdmin(){
         }
     }
 
+
+    // fetch for adding tvshows to the webapp //
     const putTvshow =() => {
        try{
         fetch(baseUrl, requestOptions)
@@ -62,6 +70,7 @@ function TvShowAdmin(){
 
     }
 
+    // fetch for getting tvshows and displaying for the user to see on the webapp //
     const getTvShows = () => {
         try {
             fetch(baseUrl)
